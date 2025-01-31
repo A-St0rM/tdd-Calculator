@@ -15,6 +15,20 @@ class CalculatorTest {
     }
 
     @Test
+    public void stringAdd(){
+        int expected = 10;
+        int actual = cl.add("5,5");
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void arrayAdd(){
+        int expected = 8;
+        int actual = cl.add(new int[]{3,2,3}); //Initializing array (Deciding size)
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void subtract(){
         int expected = 5;
         int actual = cl.subtract(10,5);
